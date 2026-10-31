@@ -1,0 +1,12 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+sgp4>=2.23
+python-dotenv>=1.0
+requests>=2.32          # Space-Track.org API calls (all agents)
+scikit-learn==1.6.1     # PINNED: must match the version gradient_boosting_model.pkl was trained with
+joblib>=1.3             # loads gradient_boosting_model.pkl
+pandas>=2.0             # passes named feature columns to the model (avoids sklearn feature-name warnings)
+anthropic>=0.34         # only needed if LLM_PROVIDER=anthropic
+google-genai>=0.3       # only needed if LLM_PROVIDER=google
+pytest>=8.0
